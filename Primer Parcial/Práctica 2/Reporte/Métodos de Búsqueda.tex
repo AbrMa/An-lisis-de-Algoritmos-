@@ -99,7 +99,49 @@ No se encontro el numero 880 en el arreglo
 \end{lstlisting}
 
 \end{itemize}
-\item Árbol
+\item Árbol de búsqueda binaria
+
+\begin{itemize}
+\item Función 
+
+\begin{lstlisting}
+Nodo* buscar(Nodo* raiz, int dato, int* pasos)
+{
+        int encontrado = 0;
+        while (!encontrado && raiz != NULL)
+        {
+                *pasos += 1;
+                if (dato == raiz -> numero)
+                        encontrado = 1;
+                else if (dato < raiz -> numero)
+                        raiz = raiz -> izquierdo;
+                else if (dato > raiz -> numero)
+                        raiz = raiz -> derecho;
+        }
+        return raiz;
+}
+\end{lstlisting}
+
+\lstset{basicstyle=\tiny}
+\begin{lstlisting}
+
+
+void buscar_Arbol(Nodo *raiz, int num_a_buscar)
+{
+        int pasos = 0;
+        if(!buscar(raiz,num_a_buscar,&pasos))
+                printf("No se encontro el numero %d en el arbol, 
+                se dieron %d pasos.\n", num_a_buscar, pasos);
+        else
+                printf("Se encontro el numero %d en el arbol, se dieron %d pasos.\n"
+                , num_a_buscar, pasos);
+}
+
+\end{lstlisting}
+
+
+\end{itemize}
+
 \end{enumerate}
 
 
