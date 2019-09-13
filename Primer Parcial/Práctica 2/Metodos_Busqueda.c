@@ -36,7 +36,7 @@ int main()
 	busqueda_binaria(arreglo, 20, 880);
 	printf("\n\n");
 
-	printf("BÚSQUEDA Árbol Balanceado\n");
+	printf("BÚSQUEDA Árbol cargado a la izquierda\n");
 	Nodo* raiz2 = NULL;
 	insertar(&raiz2, 20);
 	insertar(&raiz2, 19);
