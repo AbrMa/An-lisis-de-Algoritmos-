@@ -46,7 +46,7 @@ int main()
 	insertar(&raiz2, 15);
 	insertar(&raiz2, 14);
 	insertar(&raiz2, 13);
-	insertar(&raiz2, 13);
+	insertar(&raiz2, 12);
 	insertar(&raiz2, 11);
 	insertar(&raiz2, 10);
 	insertar(&raiz2, 9);
@@ -58,7 +58,7 @@ int main()
 	insertar(&raiz2, 3);
 	insertar(&raiz2, 2);
 	insertar(&raiz2, 1);
-	buscar_Arbol(raiz2,20);
+	buscar_Arbol(raiz2,1);
 	buscar_Arbol(raiz2,10);
 	printf("\n\n");
 
