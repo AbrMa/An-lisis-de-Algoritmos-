@@ -31,7 +31,7 @@ int is_a_power_of_2(int n)
 int next_power_of_2(int n)
 {
     int p = 1;
-    if (n && !(n & (n - 1)))
+    if (is_a_power_of_2(n))
         return n;
     while (p < n)
         p <<= 1;
@@ -79,6 +79,8 @@ int multiplication(string x, string y, int n)
 string binary_rep(int n)
 {
 	string s;
+	if (n == 0)
+		s.append("0");	
 	while (n)
 	{
 		if (n & 1)
@@ -86,7 +88,7 @@ string binary_rep(int n)
 		else
 			s.append("0");
 		n >>= 1;
-	}	
+	}
 	reverse(s.begin(),s.end());
 	return s;
 }
